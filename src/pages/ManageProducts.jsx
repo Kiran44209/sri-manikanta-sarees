@@ -45,7 +45,7 @@ function ManageProducts() {
       alert("Please fill all fields.");
       return;
     }
-    if (editingId) {
+    if (editingId !== null) {
       setProducts(
         products.map((product) =>
           product.id === editingId
@@ -76,10 +76,16 @@ function ManageProducts() {
   };
   const handleEdit = (product) => {
     setEditingId(product.id);
-    setFormData({name: product.name, price: product.price, category: product.category,});
+    setFormData({
+      name: product.name,
+      price: product.price,
+      category: product.category,
+    });
   };
   const handleDelete = (id) => {
-    setProducts(products.filter((product) => product.id !== id));
+    setProducts(
+      products.filter((product) => product.id !== id)
+    );
   };
   return (
     <div className="page">

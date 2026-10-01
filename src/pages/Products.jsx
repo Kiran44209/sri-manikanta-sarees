@@ -41,7 +41,7 @@ function Products() {
         setSearch(value);
         setSearchParams(value ? { search: value} : {});
       }}
-       className="product-searchh" />
+       className="product-search" />
        <div className="product-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (

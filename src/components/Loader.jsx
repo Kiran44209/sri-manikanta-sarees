@@ -6,5 +6,4 @@ function Loader() {
     </div>
   );
 }
-
 export default Loader;
